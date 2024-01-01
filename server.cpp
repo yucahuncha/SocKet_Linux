@@ -67,7 +67,7 @@ int main()
         if (len > 0)
         {
             std::cout<<"client say:"<<buff<<std::endl;
-            send(cfd,buff,len,0);
+            //send(cfd,buff,len,0);
             /* code */
         }
         else if(len == 0)
@@ -84,11 +84,10 @@ int main()
             /* code */
         }
 
-        char buf[1024];
-        //测试数据sprintf(buff,"hello %d\n",numble++);
+     
+        sprintf(buff,"hello");
         std::cout<<"send>";
-        std::cin>>buf;
-        send(fd,buf,strlen(buf),0);
+        send(cfd,buff,strlen(buff)+1,0);
         
         
         
